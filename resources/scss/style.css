@@ -2,12 +2,23 @@ body {
   width: 100%;
   height: 100%;
   background: #e5e5e5;
+  margin: 0;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
 }
 
 body .container .sidebar {
-  width: 287px;
+  width: 18%;
   min-height: 100vh;
-  position: absolute;
+  min-width: 8vw;
   left: 0%;
   right: 0%;
   top: 0px;
@@ -101,12 +112,12 @@ body .container .sidebar .menu-list .logout {
 }
 
 body .container .sidebar .menu-first {
-  min-height: 74vh;
+  min-height: 72vh;
 }
 
 body .container .main {
-  position: absolute;
-  left: 315px;
+  width: 82%;
+  margin: 28px;
 }
 
 body .container .main .info-search {
@@ -119,21 +130,14 @@ body .container .main .info-search {
   color: #747474;
 }
 
-body .container .main .title-chat {
-  font-family: Carmen Sans;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 31px;
-  color: #000000;
-}
-
 body .container .main .search {
   position: relative;
+  width: 100%;
+  margin-right: 28px;
 }
 
 body .container .main .search .input-search {
-  width: 1016px;
+  width: 100%;
   height: 60px;
   top: 28px;
   background: #ffffff;
@@ -150,17 +154,116 @@ body .container .main .search .icon-search {
   top: 38%;
 }
 
-body .container .main .chat-content {
+body .container .main .chat-reminders {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container .main .chat-reminders .chat {
+  width: 96%;
+}
+
+body .container .main .chat-reminders .reminders .title-reminder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .main .chat-reminders .reminders .title-reminder .see-more {
+  color: #d75f8d;
+  position: absolute;
+  right: 27px;
+  top: 120px;
+}
+
+body .container .main .chat-reminders .reminders .event {
+  margin-top: 10px;
+}
+
+body .container .main .chat-reminders .reminders .event .all-events {
+  color: #d75f8d;
+  position: absolute;
+  right: 27px;
+  top: 255px;
+}
+
+body .container .main .chat-reminders .reminders .event-content {
   background: #fff;
-  width: 722px;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+body .container .main .chat-reminders .reminders .event-content .main-event {
+  padding: 20px;
+}
+
+body .container .main .chat-reminders .reminders .event-content .main-event button {
+  background: #d75f8d;
+  -webkit-box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 40px;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+body .container .main .chat-reminders .reminders .event-content .main-event p {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+body .container .main .chat-reminders .reminders .event-content .main-event .connect {
+  font-size: 12px;
+  line-height: 22px;
+}
+
+body .container .main .chat-reminders .reminders .event-content .main-event .online {
+  font-size: 25px;
+  line-height: 40px;
+}
+
+body .container .main .chat-reminders .reminders .event-content .main-event .date,
+body .container .main .chat-reminders .reminders .event-content .main-event .des {
+  line-height: 16px;
+  font-size: 12px;
+}
+
+body .container .main .chat-reminders .reminders .event-content .main-event .clr {
+  color: #828282;
+}
+
+body .container .main .chat-reminders .title-chat {
+  font-family: Carmen Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 31px;
+  color: #000000;
+  margin: 9px 0;
+}
+
+body .container .main .chat-reminders .chat-content {
+  background: #fff;
   height: 501px;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   padding: 24px;
+  margin-right: 28px;
 }
 
-body .container .main .chat-content .header-search {
+body .container .main .chat-reminders .chat-content .header-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,12 +275,13 @@ body .container .main .chat-content .header-search {
           justify-content: space-between;
 }
 
-body .container .main .chat-content .header-search .search {
+body .container .main .chat-reminders .chat-content .header-search .search-second {
   width: 100%;
   margin-right: 35px;
+  position: relative;
 }
 
-body .container .main .chat-content .header-search .search .input-search {
+body .container .main .chat-reminders .chat-content .header-search .search-second .input-search {
   width: 100%;
   height: 50px;
   top: 28px;
@@ -189,7 +293,63 @@ body .container .main .chat-content .header-search .search .input-search {
   padding: 0 50px;
 }
 
-body .container .main .chat-content .chat-search {
+body .container .main .chat-reminders .chat-content .header-search .search-second .icon-search-chat {
+  position: absolute;
+  left: 20px;
+  top: 33%;
+}
+
+body .container .main .chat-reminders .reminder-content {
+  background: #fff;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .main .chat-reminders .reminder-content .card-first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .main .chat-reminders .reminder-content .card-first .card-date {
+  background: #e28bae;
+  padding: 12px;
+  width: 66px;
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  font-family: Carmen Sans;
+  border-radius: 5px 0 0 5px;
+}
+
+body .container .main .chat-reminders .reminder-content .card-first .text {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #262626;
+  margin-left: 15px;
+  width: 130px;
+}
+
+body .container .main .chat-reminders .reminder-content .avt {
+  margin: 5px 20px 0 0;
+}
+
+body .container .main .chat-reminders .chat-search {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -197,5 +357,16 @@ body .container .main .chat-content .chat-search {
   line-height: 16px;
   color: #747474;
   margin: 5px 42px;
+}
+
+body .container .main .header-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 /*# sourceMappingURL=style.css.map */

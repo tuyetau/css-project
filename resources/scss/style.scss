@@ -2,11 +2,15 @@ body {
   width: 100%;
   height: 100%;
   background: #e5e5e5;
+  margin: 0;
   .container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
     .sidebar {
-      width: 287px;
+      width: 18%;
       min-height: 100vh;
-      position: absolute;
+      min-width: 8vw;
       left: 0%;
       right: 0%;
       top: 0px;
@@ -79,12 +83,12 @@ body {
         }
       }
       .menu-first {
-        min-height: 74vh;
+        min-height: 72vh;
       }
     }
     .main {
-      position: absolute;
-      left: 315px;
+      width: 82%;
+      margin: 28px;
       .info-search {
         margin-left: 50px;
         font-family: Roboto;
@@ -94,18 +98,12 @@ body {
         line-height: 19px;
         color: #747474;
       }
-      .title-chat {
-        font-family: Carmen Sans;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 22px;
-        line-height: 31px;
-        color: #000000;
-      }
       .search {
         position: relative;
+        width: 100%;
+        margin-right: 28px;
         .input-search {
-          width: 1016px;
+          width: 100%;
           height: 60px;
           top: 28px;
           background: #ffffff;
@@ -120,30 +118,146 @@ body {
           top: 38%;
         }
       }
-      .chat-content {
-        background: #fff;
-        width: 722px;
-        height: 501px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-        border-radius: 5px;
-        padding: 24px;
-        .header-search {
+      .chat-reminders {
+        width: 100%;
+        display: flex;
+        .chat {
+          width: 96%;
+        }
+        .reminders {
+          .title-reminder {
+            display: flex;
+            justify-content: space-between;
+            .see-more {
+              color: #d75f8d;
+              position: absolute;
+              right: 27px;
+              top: 120px;
+            }
+          }
+          .event {
+            margin-top: 10px;
+            .all-events {
+              color: #d75f8d;
+              position: absolute;
+              right: 27px;
+              top: 255px;
+            }
+          }
+          .event-content {
+            background: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            border-radius: 5px;
+            .main-event {
+              padding: 20px;
+              button {
+                background: #d75f8d;
+                box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.05);
+                border-radius: 40px;
+                color: #fff;
+                padding: 12px;
+                font-size: 16px;
+                border: none;
+                font-weight: 600;
+                margin-top: 16px;
+              }
+              p {
+                margin-block-start: 0;
+                margin-block-end: 0;
+              }
+              .connect {
+                font-size: 12px;
+                line-height: 22px;
+              }
+              .online {
+                font-size: 25px;
+                line-height: 40px;
+              }
+              .date,
+              .des {
+                line-height: 16px;
+                font-size: 12px;
+              }
+              .clr {
+                color: #828282;
+              }
+            }
+          }
+        }
+        .title-chat {
+          font-family: Carmen Sans;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 31px;
+          color: #000000;
+          margin: 9px 0;
+        }
+        .chat-content {
+          background: #fff;
+          height: 501px;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          border-radius: 5px;
+          padding: 24px;
+          margin-right: 28px;
+          .header-search {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .search-second {
+              width: 100%;
+              margin-right: 35px;
+              position: relative;
+              .input-search {
+                width: 100%;
+                height: 50px;
+                top: 28px;
+                background: #ffffff;
+                border: 2px solid #dbdbdb;
+                box-sizing: border-box;
+                border-radius: 5px;
+                padding: 0 50px;
+              }
+              .icon-search-chat {
+                position: absolute;
+                left: 20px;
+                top: 33%;
+              }
+            }
+          }
+        }
+        .reminder-content {
+          background: #fff;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+          border-radius: 5px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          .search {
-            width: 100%;
-            margin-right: 35px;
-            .input-search {
-              width: 100%;
-              height: 50px;
-              top: 28px;
-              background: #ffffff;
-              border: 2px solid #dbdbdb;
-              box-sizing: border-box;
-              border-radius: 5px;
-              padding: 0 50px;
+          .card-first {
+            display: flex;
+            align-items: center;
+            .card-date {
+              background: #e28bae;
+              padding: 12px;
+              width: 66px;
+              text-align: center;
+              font-size: 22px;
+              color: #fff;
+              font-weight: 500;
+              font-family: Carmen Sans;
+              border-radius: 5px 0 0 5px;
             }
+            .text {
+              font-size: 12px;
+              font-weight: 500;
+              font-family: Roboto;
+              color: #262626;
+              margin-left: 15px;
+              width: 130px;
+            }
+          }
+          .avt {
+            margin: 5px 20px 0 0;
           }
         }
         .chat-search {
@@ -155,6 +269,11 @@ body {
           color: #747474;
           margin: 5px 42px;
         }
+      }
+      .header-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
       }
     }
   }
