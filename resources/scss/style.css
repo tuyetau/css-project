@@ -27,6 +27,10 @@ body .container .small-nav .icon-arrow {
   margin: 20px 35px 0 0 !important;
 }
 
+body .container .header {
+  display: none;
+}
+
 body .container .sidebar {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
@@ -500,7 +504,7 @@ body .container .main .header-main .icon-search-mobile {
   display: none;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 415px) {
   body .container .sidebar {
     width: 10%;
   }
@@ -514,13 +518,87 @@ body .container .main .header-main .icon-search-mobile {
 
 @media only screen and (max-width: 768px) {
   body .container .sidebar {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
     width: 14%;
   }
 }
 
 @media only screen and (max-width: 414px) {
   body .container .sidebar {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    width: 0% !important;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    z-index: 9;
+    position: absolute;
+  }
+  body .container .sidebar .user-info {
     display: none;
+  }
+  body .container .sidebar .menu-list {
+    display: none;
+  }
+  body .container .small-nav {
+    display: none;
+  }
+  body .container .active-mobile {
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
+    z-index: 9;
+    width: 100% !important;
+    position: absolute;
+  }
+  body .container .active-mobile .user-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .container .active-mobile .menu-list {
+    display: block;
+  }
+  body .container .active-mobile .menu-list .logout {
+    margin: 0;
+  }
+  body .container .header {
+    background: #ffffff;
+    -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+    height: 95px;
+    width: -webkit-fill-available;
+    position: absolute;
+    border-radius: 0 0 20px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .container .header .border-avt {
+    position: relative;
+    border: 2px solid #d75f8d;
+    border-radius: 100%;
+    padding: 23px;
+  }
+  body .container .header .border-avt img {
+    position: absolute;
+    right: -2px;
+    top: 2px;
+  }
+  body .container .main-hide {
+    display: none;
+  }
+  body .container .main-show {
+    display: block;
+  }
+  body .container .main .header-main {
+    margin-top: 65px;
   }
   body .container .main .chat-reminders {
     display: block;

@@ -13,6 +13,13 @@
   </head>
   <body>
     <div class="container">
+      <div class="header">
+        <img class="icon-menu" alt="menu" src="resources/img/menu.svg" />
+        <img alt="home" src="resources/img/home.svg" />
+        <div class="border-avt">
+          <img alt="avatar" src="resources/img/avatar.svg" />
+        </div>
+      </div>
       <div class="sidebar">
         <button class="icon-arrow">
           <img alt="arrow" src="resources/img/arrow.svg" />
@@ -280,9 +287,20 @@
       $('.icon-arrow').click(function () {
         $('.text-menu').toggleClass('active');
         $('.sidebar').toggleClass('small-nav');
+        $('.active-mobile').removeClass('small-nav');
+        $('.sidebar').removeClass('active-mobile');
+        $('.main').toggleClass('main-show');
+        $('.main').removeClass('main-hide');
       });
       $('.icon-search-mobile').click(function () {
         $('.search').toggle();
+      });
+      $('.icon-menu').click(function () {
+        $('.sidebar').removeClass('small-nav');
+        $('.sidebar').toggleClass('active-mobile');
+        $('.text-menu').removeClass('active');
+        $('.main').toggleClass('main-hide');
+        $('.main').removeClass('main-show');
       });
     </script>
   </body>

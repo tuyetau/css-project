@@ -15,6 +15,9 @@ body {
         margin: 20px 35px 0 0 !important;
       }
     }
+    .header {
+      display: none;
+    }
     .sidebar {
       transition-duration: 0.25s;
       width: 18%;
@@ -370,7 +373,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 415px) {
   body {
     .container {
       .sidebar {
@@ -390,6 +393,7 @@ body {
   body {
     .container {
       .sidebar {
+        transition-duration: 0.25s;
         width: 14%;
       }
     }
@@ -399,10 +403,75 @@ body {
 @media only screen and (max-width: 414px) {
   body {
     .container {
+      // .sidebar {
+      //   display: none;
+      // }
       .sidebar {
+        transition-duration: 0.25s;
+        width: 0% !important;
+        box-shadow: unset;
+        z-index: 9;
+        position: absolute;
+        .user-info {
+          display: none;
+        }
+        .menu-list {
+          display: none;
+        }
+      }
+      .small-nav {
         display: none;
       }
+      .active-mobile {
+        transition-duration: 0.25s;
+        z-index: 9;
+        width: 100% !important;
+        position: absolute;
+        .user-info {
+          display: flex;
+        }
+        .menu-list {
+          display: block;
+        }
+        .menu-list {
+          .logout {
+            margin: 0;
+          }
+        }
+      }
+      .header {
+        background: #ffffff;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.16);
+        height: 95px;
+        width: -webkit-fill-available;
+        position: absolute;
+        border-radius: 0 0 20px 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        align-items: center;
+        .border-avt {
+          position: relative;
+          border: 2px solid #d75f8d;
+          border-radius: 100%;
+          padding: 23px;
+          img {
+            position: absolute;
+            right: -2px;
+            top: 2px;
+          }
+        }
+      }
+      .main-hide {
+        display: none;
+      }
+      .main-show {
+        display: block;
+      }
       .main {
+        .header-main {
+          margin-top: 65px;
+        }
         .chat-reminders {
           display: block;
           .chat-content {
