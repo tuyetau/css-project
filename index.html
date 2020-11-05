@@ -14,69 +14,88 @@
   <body>
     <div class="container">
       <div class="sidebar">
-        <img class="icon-arrow" alt="arrow" src="resources/img/arrow.svg" />
+        <button class="icon-arrow">
+          <img alt="arrow" src="resources/img/arrow.svg" />
+        </button>
         <div class="user-info">
           <img alt="Karin" src="resources/img/avatar.svg" />
-          <div class="name-user">
+          <div class="name-user text-menu">
             <span class="name-big">Hi, Karin!</span><br />
             <span class="name-profile">View my profile</span>
           </div>
         </div>
         <ul class="menu-list menu-first">
-          <li><img alt="home" src="resources/img/home.svg" />Home</li>
-          <li><img alt="chat" src="resources/img/chat.svg" />Chat</li>
+          <li>
+            <img alt="home" src="resources/img/home.svg" />
+            <span class="text-menu">Home</span>
+          </li>
+          <li>
+            <img alt="chat" src="resources/img/chat.svg" />
+            <span class="text-menu">Chat</span>
+          </li>
           <li>
             <img alt="events" src="resources/img/events.svg" />
-            <span class="number">3</span>Events
+            <span class="number">3</span>
+            <span class="text-menu">Events</span>
           </li>
           <li>
             <img alt="users" src="resources/img/users.svg" />
-            Users
+            <span class="text-menu">Users</span>
           </li>
           <br />
           <li>
-            <img
-              alt="user management"
-              src="resources/img/user-manage.svg"
-            />User management
+            <img alt="user management" src="resources/img/user-manage.svg" />
+            <span class="text-menu">User management</span>
           </li>
           <li>
-            <img
-              alt="hospital management"
-              src="resources/img/hospital.svg"
-            />Hospital management
+            <img alt="hospital management" src="resources/img/hospital.svg" />
+            <span class="text-menu">Hospital management</span>
           </li>
           <li>
-            <img alt="topic management" src="resources/img/topic.svg" />Topic
-            management
+            <img alt="topic management" src="resources/img/topic.svg" />
+            <span class="text-menu">Topic management</span>
           </li>
         </ul>
         <ul class="menu-list">
           <li class="logout">
-            <img alt="logout" src="resources/img/logout.svg" />Logout
+            <img alt="logout" src="resources/img/logout.svg" />
+            <span class="text-menu">Logout</span>
           </li>
         </ul>
       </div>
       <div class="main">
         <div class="header-main">
+          <p class="home-title"></p>
           <div class="search">
-            <input class="input-search" />
+            <input
+              class="input-search"
+              placeholder="Search for people or groups"
+            />
             <img
               class="icon-search"
               alt="search"
               src="resources/img/search.svg"
             />
           </div>
-          <img alt="home" src="resources/img/home.svg" />
+          <div class="group-icon">
+            <img
+              class="icon-search-mobile"
+              alt="search"
+              src="resources/img/search.svg"
+            />
+            <img alt="roche" src="resources/img/roche.svg" />
+          </div>
         </div>
-        <div class="info-search">Search for people or groups</div>
         <div class="chat-reminders">
           <div class="chat">
             <p class="title-chat">Chat</p>
             <div class="chat-content">
               <div class="header-search">
                 <div class="search-second">
-                  <input class="input-search" />
+                  <input
+                    class="input-search"
+                    placeholder="Search in conversation"
+                  />
                   <img
                     class="icon-search-chat"
                     alt="search"
@@ -85,7 +104,6 @@
                 </div>
                 <img alt="edit" src="resources/img/edit.svg" />
               </div>
-              <div class="chat-search">Search in conversation</div>
               <p class="guided">Guided Conversations</p>
               <ul class="list-chat">
                 <li>
@@ -257,5 +275,15 @@
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      $('.icon-arrow').click(function () {
+        $('.text-menu').toggleClass('active');
+        $('.sidebar').toggleClass('small-nav');
+      });
+      $('.icon-search-mobile').click(function () {
+        $('.search').toggle();
+      });
+    </script>
   </body>
 </html>

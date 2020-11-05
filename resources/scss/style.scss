@@ -7,19 +7,35 @@ body {
     display: flex;
     justify-content: flex-start;
     width: 100%;
+    .small-nav {
+      transition-duration: 0.25s;
+      width: 6% !important;
+      .icon-arrow {
+        transform: rotate(180deg);
+        margin: 20px 35px 0 0 !important;
+      }
+    }
     .sidebar {
+      transition-duration: 0.25s;
       width: 18%;
       min-height: 100vh;
-      min-width: 8vw;
       left: 0%;
       right: 0%;
       top: 0px;
       background: #ffffff;
       border-radius: 0 20px 20px 0;
       box-shadow: -3px 3px 5px 5px #cec8c8;
+      .active {
+        display: none;
+      }
       .icon-arrow {
         float: right;
         margin: 20px 20px 0 0;
+        border: none;
+        background: none;
+        &:focus {
+          outline: none;
+        }
       }
       .user-info {
         display: flex;
@@ -87,7 +103,7 @@ body {
       }
     }
     .main {
-      width: 82%;
+      width: 100%;
       margin: 28px;
       .title-chat {
         font-family: Carmen Sans;
@@ -97,15 +113,6 @@ body {
         line-height: 31px;
         color: #000000;
         margin: 9px 0;
-      }
-      .info-search {
-        margin-left: 50px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        color: #747474;
       }
       .search {
         position: relative;
@@ -137,20 +144,22 @@ body {
           .title-reminder {
             display: flex;
             justify-content: space-between;
+            position: relative;
             .see-more {
               color: #d75f8d;
               position: absolute;
-              right: 27px;
-              top: 120px;
+              right: 0;
+              top: 12px;
             }
           }
           .event {
             margin-top: 10px;
+            position: relative;
             .all-events {
               color: #d75f8d;
               position: absolute;
-              right: 27px;
-              top: 265px;
+              right: 0;
+              top: 12px;
             }
           }
           .event-content {
@@ -209,6 +218,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 20px;
             .search-second {
               width: 100%;
               margin-right: 35px;
@@ -328,9 +338,12 @@ body {
         .com-content {
           display: flex;
           justify-content: space-between;
+          width: 100%;
+          overflow: auto;
         }
         .main-img {
           position: relative;
+          margin-right: 28px;
           .card-time {
             background: #e28bae;
             padding: 15px;
@@ -340,12 +353,111 @@ body {
             position: absolute;
             bottom: 3px;
           }
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
       .header-main {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        .icon-search-mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    .container {
+      .sidebar {
+        .icon-arrow {
+          display: none;
+        }
+        width: 10%;
+        .text-menu {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    .container {
+      .sidebar {
+        width: 14%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  body {
+    .container {
+      .sidebar {
+        display: none;
+      }
+      .main {
+        .chat-reminders {
+          display: block;
+          .chat-content {
+            margin-right: 0;
+          }
+          .chat {
+            width: 100%;
+          }
+          .reminders {
+            .event-content {
+              .img-event {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .community {
+          .com-content {
+            display: block;
+            .main-img {
+              margin-right: 0;
+              margin-bottom: 10px;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .header-main {
+          justify-content: space-between;
+          position: relative;
+          .home-title {
+            font-family: Carmen Sans;
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 18px;
+            &:before {
+              content: 'Home';
+            }
+          }
+
+          .search {
+            display: none;
+            position: absolute;
+            top: 60px;
+            box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
+          }
+          .group-icon {
+            display: flex;
+            .icon-search-mobile {
+              display: block;
+              margin-right: 15px;
+            }
+          }
+        }
       }
     }
   }
