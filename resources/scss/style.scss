@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../../font/Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Carmen Sans;
+  src: url(../../font/carmen-sans/Carmen-Sans-SemiBold.otf);
+}
 body {
   width: 100%;
   height: 100%;
@@ -14,13 +22,29 @@ body {
         transform: rotate(180deg);
         margin: 20px 35px 0 0 !important;
       }
+      .menu-list {
+        li {
+          width: 250px;
+          &:hover {
+            z-index: 8;
+            border-radius: 0 10px 10px 0;
+            .active {
+              color: #000;
+            }
+          }
+          .active {
+            display: block;
+            color: transparent;
+          }
+        }
+      }
     }
     .header {
       display: none;
     }
     .sidebar {
       transition-duration: 0.25s;
-      width: 18%;
+      width: 22%;
       min-height: 100vh;
       left: 0%;
       right: 0%;
@@ -67,7 +91,10 @@ body {
       }
       .menu-list {
         list-style-type: none;
+        padding-inline-start: 0;
+
         li {
+          position: relative;
           font-family: Roboto;
           font-style: normal;
           font-weight: normal;
@@ -75,7 +102,11 @@ body {
           align-items: center;
           display: flex;
           color: #747474;
-          margin: 37px 0;
+          padding: 37px;
+          &:hover {
+            background: #e28bae;
+            color: #262626;
+          }
           img {
             margin-right: 35px;
           }
@@ -83,8 +114,8 @@ body {
             position: absolute;
             width: 13px;
             height: 13px;
-            left: 55px;
-            top: 265px;
+            left: 52px;
+            top: 33px;
             font-family: Roboto;
             font-style: normal;
             font-weight: 500;
@@ -95,6 +126,7 @@ body {
             border: 1px solid #dcd5d5;
             background: #ff00f5;
             border-radius: 100%;
+            z-index: 9;
           }
         }
         .logout {
@@ -149,6 +181,7 @@ body {
             justify-content: space-between;
             position: relative;
             .see-more {
+              font-family: Roboto;
               color: #d75f8d;
               position: absolute;
               right: 0;
@@ -159,6 +192,7 @@ body {
             margin-top: 10px;
             position: relative;
             .all-events {
+              font-family: Roboto;
               color: #d75f8d;
               position: absolute;
               right: 0;
@@ -171,6 +205,7 @@ body {
             border-radius: 5px;
             .main-event {
               padding: 20px;
+              font-family: Roboto;
               button {
                 background: #d75f8d;
                 box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.05);
@@ -180,7 +215,7 @@ body {
                 font-size: 16px;
                 border: none;
                 font-weight: 600;
-                margin-top: 16px;
+                margin-top: 20px;
               }
               p {
                 margin-block-start: 0;
@@ -193,6 +228,8 @@ body {
               .online {
                 font-size: 25px;
                 line-height: 40px;
+                font-weight: 600;
+                color: rgba(0, 0, 0, 0.87);
               }
               .date,
               .des {
@@ -250,9 +287,10 @@ body {
               display: flex;
               align-items: center;
               justify-content: space-between;
+              padding: 2px 0;
               .infor-chat {
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
                 .avt-user {
                   position: relative;
                   min-width: 60px;
@@ -278,11 +316,13 @@ body {
                   font-weight: 600;
                   color: #262626;
                   margin-block-end: 0;
+                  font-family: Roboto;
                 }
                 .des-name {
                   margin-block-start: 0;
                   color: #747474;
                   font-size: 12px;
+                  font-family: Roboto;
                 }
               }
             }
@@ -355,6 +395,7 @@ body {
             width: 180px;
             position: absolute;
             bottom: 3px;
+            font-family: Roboto;
           }
           &:last-child {
             margin-right: 0;
@@ -402,10 +443,12 @@ body {
 
 @media only screen and (max-width: 414px) {
   body {
+    .conta {
+      .header {
+        display: none !important;
+      }
+    }
     .container {
-      // .sidebar {
-      //   display: none;
-      // }
       .sidebar {
         transition-duration: 0.25s;
         width: 0% !important;
@@ -476,6 +519,13 @@ body {
           display: block;
           .chat-content {
             margin-right: 0;
+            .list-chat {
+              .infor-chat {
+                .set-text {
+                  width: 138px;
+                }
+              }
+            }
           }
           .chat {
             width: 100%;

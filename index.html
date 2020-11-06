@@ -40,7 +40,7 @@
             <img alt="chat" src="resources/img/chat.svg" />
             <span class="text-menu">Chat</span>
           </li>
-          <li>
+          <li class="li-event">
             <img alt="events" src="resources/img/events.svg" />
             <span class="number">3</span>
             <span class="text-menu">Events</span>
@@ -123,7 +123,7 @@
                         src="resources/img/avatar.svg"
                       />
                     </div>
-                    <div>
+                    <div class="set-text">
                       <p class="name">Lindsey Stroud</p>
                       <p class="des-name">Danke Karin für die Info</p>
                     </div>
@@ -142,7 +142,7 @@
                         src="resources/img/nicci.svg"
                       />
                     </div>
-                    <div>
+                    <div class="set-text">
                       <p class="name">Nicci Troiani</p>
                       <p class="des-name">Request has been send</p>
                     </div>
@@ -165,7 +165,7 @@
                         src="resources/img/xixi.svg"
                       />
                     </div>
-                    <div>
+                    <div class="set-text">
                       <p class="name">Anna Riklin, Xixi</p>
                       <p class="des-name">
                         Ich habe hier ein tolle Bindetechnik für ein Kopftuch
@@ -184,7 +184,7 @@
                         src="resources/img/xixi.svg"
                       />
                     </div>
-                    <div>
+                    <div class="set-text">
                       <p class="name">Xixi</p>
                       <p class="des-name">
                         Today I had my first therapy. I could be worse honestly.
@@ -202,7 +202,7 @@
                         src="resources/img/nicci.svg"
                       />
                     </div>
-                    <div>
+                    <div class="set-text">
                       <p class="name">Nicci Troiani</p>
                       <p class="des-name">Request has been send</p>
                     </div>
@@ -282,7 +282,7 @@
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./resources/jquery/jquery.min.js"></script>
     <script>
       $('.icon-arrow').click(function () {
         $('.text-menu').toggleClass('active');
@@ -291,6 +291,7 @@
         $('.sidebar').removeClass('active-mobile');
         $('.main').toggleClass('main-show');
         $('.main').removeClass('main-hide');
+        $('.container').removeClass('conta');
       });
       $('.icon-search-mobile').click(function () {
         $('.search').toggle();
@@ -301,6 +302,7 @@
         $('.text-menu').removeClass('active');
         $('.main').toggleClass('main-hide');
         $('.main').removeClass('main-show');
+        $('.container').toggleClass('conta');
       });
     </script>
   </body>
