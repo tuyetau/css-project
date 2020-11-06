@@ -8,6 +8,11 @@
   src: url(../../font/carmen-sans/Carmen-Sans-SemiBold.otf);
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -62,7 +67,7 @@ body .container .header {
 body .container .sidebar {
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
-  width: 22%;
+  width: 18%;
   min-height: 100vh;
   left: 0%;
   right: 0%;
@@ -103,22 +108,19 @@ body .container .sidebar .user-info .name-user {
 }
 
 body .container .sidebar .user-info .name-user .name-big {
-  font-family: Carmen Sans;
-  font-style: normal;
-  font-weight: 500;
+  color: #262626;
   font-size: 18px;
+  font-family: Carmen Sans;
+  font-weight: 500;
   line-height: 18px;
   text-align: center;
-  color: #262626;
 }
 
 body .container .sidebar .user-info .name-user .name-profile {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
   color: #d75f8d;
+  font-size: 14px;
+  font-family: Roboto;
+  line-height: 18px;
 }
 
 body .container .sidebar .menu-list {
@@ -129,18 +131,16 @@ body .container .sidebar .menu-list {
 
 body .container .sidebar .menu-list li {
   position: relative;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
+  color: #747474;
   font-size: 18px;
+  font-family: Roboto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #747474;
-  padding: 37px;
+  padding: 25px 40px;
 }
 
 body .container .sidebar .menu-list li:hover {
@@ -156,15 +156,14 @@ body .container .sidebar .menu-list li .number {
   position: absolute;
   width: 13px;
   height: 13px;
-  left: 52px;
-  top: 33px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
+  left: 54px;
+  top: 20px;
+  color: #ffffff;
   font-size: 10px;
+  font-family: Roboto;
+  font-weight: 500;
   line-height: 12px;
   text-align: center;
-  color: #ffffff;
   border: 1px solid #dcd5d5;
   background: #ff00f5;
   border-radius: 100%;
@@ -179,18 +178,21 @@ body .container .sidebar .menu-first {
   min-height: 72vh;
 }
 
+body .container .main-show {
+  width: calc(94% - 56px) !important;
+}
+
 body .container .main {
-  width: 100%;
+  width: calc(82% - 56px);
   margin: 28px;
 }
 
 body .container .main .title-chat {
-  font-family: Carmen Sans;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 31px;
   color: #000000;
+  font-size: 22px;
+  font-family: Carmen Sans;
+  font-weight: 500;
+  line-height: 31px;
   margin: 9px 0;
 }
 
@@ -240,8 +242,9 @@ body .container .main .chat-reminders .reminders .title-reminder {
 }
 
 body .container .main .chat-reminders .reminders .title-reminder .see-more {
-  font-family: Roboto;
   color: #d75f8d;
+  font-size: 16px;
+  font-family: Roboto;
   position: absolute;
   right: 0;
   top: 12px;
@@ -253,8 +256,9 @@ body .container .main .chat-reminders .reminders .event {
 }
 
 body .container .main .chat-reminders .reminders .event .all-events {
-  font-family: Roboto;
   color: #d75f8d;
+  font-size: 16px;
+  font-family: Roboto;
   position: absolute;
   right: 0;
   top: 12px;
@@ -267,19 +271,23 @@ body .container .main .chat-reminders .reminders .event-content {
   border-radius: 5px;
 }
 
+body .container .main .chat-reminders .reminders .event-content .img-event {
+  border-radius: 5px 5px 0 0;
+}
+
 body .container .main .chat-reminders .reminders .event-content .main-event {
   padding: 20px;
-  font-family: Roboto;
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event button {
+  color: #fff;
+  font-size: 16px;
+  font-family: Roboto;
   background: #d75f8d;
   -webkit-box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.05);
           box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.05);
   border-radius: 40px;
-  color: #fff;
   padding: 12px;
-  font-size: 16px;
   border: none;
   font-weight: 600;
   margin-top: 20px;
@@ -293,21 +301,26 @@ body .container .main .chat-reminders .reminders .event-content .main-event p {
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event .connect {
+  color: #828282;
   font-size: 12px;
+  font-family: Roboto;
   line-height: 22px;
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event .online {
+  color: rgba(0, 0, 0, 0.87);
   font-size: 25px;
+  font-family: Roboto;
   line-height: 40px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.87);
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event .date,
 body .container .main .chat-reminders .reminders .event-content .main-event .des {
-  line-height: 20px;
+  color: #828282;
   font-size: 12px;
+  font-family: Roboto;
+  line-height: 20px;
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event .clr {
@@ -326,6 +339,7 @@ body .container .main .chat-reminders .chat-content {
 body .container .main .chat-reminders .chat-content .guided {
   color: #747474;
   font-size: 12px;
+  font-family: Roboto;
   -webkit-margin-before: 0px;
           margin-block-start: 0px;
   -webkit-margin-after: 0;
@@ -336,12 +350,12 @@ body .container .main .chat-reminders .chat-content .header-search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 20px;
 }
 
@@ -354,11 +368,11 @@ body .container .main .chat-reminders .chat-content .header-search .search-secon
 body .container .main .chat-reminders .chat-content .header-search .search-second .input-search {
   width: 100%;
   height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   top: 28px;
   background: #ffffff;
   border: 2px solid #dbdbdb;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 5px;
   padding: 0 50px;
 }
@@ -379,12 +393,12 @@ body .container .main .chat-reminders .chat-content .list-chat li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2px 0;
 }
 
@@ -411,6 +425,20 @@ body .container .main .chat-reminders .chat-content .list-chat li .infor-chat .a
   right: 12px;
 }
 
+body .container .main .chat-reminders .chat-content .list-chat li .infor-chat .avt-user .message-number {
+  position: absolute;
+  background: #eb5757;
+  color: #f2f2f2;
+  font-size: 9px;
+  font-family: Roboto;
+  border-radius: 100%;
+  height: 11px;
+  width: 11px;
+  text-align: center;
+  bottom: 12px;
+  right: 12px;
+}
+
 body .container .main .chat-reminders .chat-content .list-chat li .infor-chat .avt-user .multy {
   top: 4px;
   position: absolute;
@@ -422,11 +450,11 @@ body .container .main .chat-reminders .chat-content .list-chat li .infor-chat .a
 }
 
 body .container .main .chat-reminders .chat-content .list-chat li .infor-chat .name {
-  font-size: 14px;
   font-weight: 600;
-  color: #262626;
   -webkit-margin-after: 0;
           margin-block-end: 0;
+  color: #262626;
+  font-size: 14px;
   font-family: Roboto;
 }
 
@@ -441,6 +469,7 @@ body .container .main .chat-reminders .chat-content .list-chat li .infor-chat .d
 body .container .main .chat-reminders .chat-content .list-chat .time {
   color: #747474;
   font-size: 12px;
+  font-family: Roboto;
 }
 
 body .container .main .chat-reminders .reminder-content {
@@ -449,12 +478,12 @@ body .container .main .chat-reminders .reminder-content {
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -474,18 +503,18 @@ body .container .main .chat-reminders .reminder-content .card-first .card-date {
   padding: 18px;
   width: 66px;
   text-align: center;
-  font-size: 22px;
-  color: #fff;
   font-weight: 500;
+  color: #fff;
+  font-size: 22px;
   font-family: Carmen Sans;
   border-radius: 5px 0 0 5px;
 }
 
 body .container .main .chat-reminders .reminder-content .card-first .text {
-  font-size: 12px;
-  font-weight: 500;
-  font-family: Roboto;
   color: #262626;
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 500;
   margin-left: 15px;
   width: 130px;
 }
@@ -495,13 +524,31 @@ body .container .main .chat-reminders .reminder-content .avt {
 }
 
 body .container .main .chat-reminders .chat-search {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
   color: #747474;
+  font-size: 14px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 16px;
   margin: 5px 42px;
+}
+
+body .container .main .community ::-webkit-scrollbar {
+  height: 10px;
+}
+
+body .container .main .community ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+body .container .main .community ::-webkit-scrollbar-thumb {
+  background: #b1afaf;
+  border-radius: 10px;
+}
+
+body .container .main .community ::-webkit-scrollbar-thumb:hover {
+  background: #8f8e8e;
 }
 
 body .container .main .community .com-content {
@@ -520,14 +567,19 @@ body .container .main .community .main-img {
   margin-right: 28px;
 }
 
+body .container .main .community .main-img img {
+  border-radius: 5px;
+}
+
 body .container .main .community .main-img .card-time {
   background: #e28bae;
   padding: 15px;
-  color: #fff;
-  border-top-right-radius: 10px;
+  border-radius: 0 10px 0 5px;
   width: 180px;
   position: absolute;
   bottom: 3px;
+  color: #fff;
+  font-size: 14px;
   font-family: Roboto;
 }
 
@@ -550,7 +602,7 @@ body .container .main .header-main .icon-search-mobile {
   display: none;
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 415px) {
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
   body .container .sidebar {
     width: 10%;
   }
@@ -560,17 +612,16 @@ body .container .main .header-main .icon-search-mobile {
   body .container .sidebar .text-menu {
     display: none;
   }
-}
-
-@media only screen and (max-width: 768px) {
-  body .container .sidebar {
-    -webkit-transition-duration: 0.25s;
-            transition-duration: 0.25s;
-    width: 14%;
+  body .container .main {
+    width: calc(90% - 56px);
+  }
+  body .container .main .community ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 768px) {
   body .conta .header {
     display: none !important;
   }
@@ -646,6 +697,9 @@ body .container .main .header-main .icon-search-mobile {
   body .container .main-show {
     display: block;
   }
+  body .container .main {
+    width: 100% !important;
+  }
   body .container .main .header-main {
     margin-top: 65px;
   }
@@ -656,7 +710,7 @@ body .container .main .header-main .icon-search-mobile {
     margin-right: 0;
   }
   body .container .main .chat-reminders .chat-content .list-chat .infor-chat .set-text {
-    width: 138px;
+    max-width: 130px;
   }
   body .container .main .chat-reminders .chat {
     width: 100%;
@@ -681,9 +735,10 @@ body .container .main .header-main .icon-search-mobile {
     position: relative;
   }
   body .container .main .header-main .home-title {
+    color: #262626;
+    font-size: 34px;
     font-family: Carmen Sans;
     font-weight: 600;
-    font-size: 34px;
     line-height: 18px;
   }
   body .container .main .header-main .home-title:before {
