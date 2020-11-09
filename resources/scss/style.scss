@@ -18,7 +18,7 @@
   font-family: $fontFamily;
 }
 
-$dask-pink-color: #d75f8d;
+$dark-pink-color: #d75f8d;
 $light-pink-color: #e28bae;
 $gray-color: #747474;
 
@@ -44,17 +44,10 @@ body {
       }
       .menu-list {
         li {
-          width: 250px;
-          &:hover {
-            z-index: 8;
-            border-radius: 0 10px 10px 0;
-            .active {
-              color: #000;
-            }
-          }
           .active {
             display: block;
             color: transparent;
+            white-space: nowrap;
           }
         }
       }
@@ -97,7 +90,7 @@ body {
             text-align: center;
           }
           .name-profile {
-            @include fontText($dask-pink-color, 14px, Roboto);
+            @include fontText($dark-pink-color, 14px, Roboto);
             line-height: 18px;
           }
         }
@@ -111,7 +104,7 @@ body {
           @include fontText($gray-color, 18px, Roboto);
           align-items: center;
           display: flex;
-          padding: 25px 40px;
+          padding: 22px 40px;
           &:hover {
             background: $light-pink-color;
             color: #262626;
@@ -140,11 +133,37 @@ body {
         }
       }
       .menu-first {
-        min-height: 72vh;
+        min-height: 80vh;
       }
     }
     .main-show {
       width: calc(94% - 56px) !important;
+      .chat-reminders {
+        .chat-content {
+          .list-chat {
+            li {
+              padding: 7.5px 0 !important;
+            }
+          }
+        }
+        .reminders {
+          width: 42vw;
+          .event-content {
+            .img-event {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+      .community {
+        .com-content {
+          .main-img {
+            img {
+              width: 564px;
+            }
+          }
+        }
+      }
     }
     .main {
       width: calc(82% - 56px);
@@ -153,7 +172,7 @@ body {
         @include fontText(#000000, 22px, Carmen Sans);
         font-weight: 500;
         line-height: 31px;
-        margin: 9px 0;
+        margin: 23px 0 9px 0;
       }
       .search {
         position: relative;
@@ -186,20 +205,19 @@ body {
             @include displayCommon;
             position: relative;
             .see-more {
-              @include fontText($dask-pink-color, 16px, Roboto);
+              @include fontText($dark-pink-color, 16px, Roboto);
               position: absolute;
               right: 0;
-              top: 12px;
+              top: 25px;
             }
           }
           .event {
-            margin-top: 10px;
             position: relative;
             .all-events {
-              @include fontText($dask-pink-color, 16px, Roboto);
+              @include fontText($dark-pink-color, 16px, Roboto);
               position: absolute;
               right: 0;
-              top: 12px;
+              top: 25px;
             }
           }
           .event-content {
@@ -208,18 +226,19 @@ body {
             border-radius: 5px;
             .img-event {
               border-radius: 5px 5px 0 0;
+              width: 487px;
             }
             .main-event {
-              padding: 20px;
+              padding: 10px 15px 15px 15px;
               button {
                 @include fontText(#fff, 16px, Roboto);
-                background: $dask-pink-color;
+                background: $dark-pink-color;
                 box-shadow: 0px -5px 40px rgba(0, 0, 0, 0.05);
                 border-radius: 40px;
                 padding: 12px;
                 border: none;
-                font-weight: 600;
-                margin-top: 20px;
+                font-weight: 500;
+                margin: 15px 0 10px 0;
               }
               p {
                 margin-block-start: 0;
@@ -227,17 +246,17 @@ body {
               }
               .connect {
                 @include fontText(#828282, 12px, Roboto);
-                line-height: 22px;
+                line-height: 12px;
               }
               .online {
                 @include fontText(rgba(0, 0, 0, 0.87), 25px, Roboto);
-                line-height: 40px;
+                line-height: 35px;
                 font-weight: 600;
               }
               .date,
               .des {
                 @include fontText(#828282, 12px, Roboto);
-                line-height: 20px;
+                line-height: 15px;
               }
               .clr {
                 color: #828282;
@@ -262,7 +281,7 @@ body {
             margin-bottom: 20px;
             .search-second {
               width: 100%;
-              margin-right: 35px;
+              margin-right: 28px;
               position: relative;
               .input-search {
                 width: 100%;
@@ -287,7 +306,7 @@ body {
             li {
               @include displayCommon;
               align-items: center;
-              padding: 2px 0;
+              padding: 4px 0;
               .infor-chat {
                 display: flex;
                 align-items: center;
@@ -339,7 +358,6 @@ body {
           }
         }
         .reminder-content {
-          min-height: 88px;
           background: #fff;
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
           border-radius: 5px;
@@ -350,8 +368,8 @@ body {
             align-items: center;
             .card-date {
               background: $light-pink-color;
-              padding: 18px;
-              width: 66px;
+              padding: 12px;
+              width: 55px;
               text-align: center;
               font-weight: 500;
               @include fontText(#fff, 22px, Carmen Sans);
@@ -400,6 +418,7 @@ body {
           margin-right: 28px;
           img {
             border-radius: 5px;
+            width: 487px;
           }
           .card-time {
             background: $light-pink-color;
@@ -422,6 +441,16 @@ body {
         .icon-search-mobile {
           display: none;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  body {
+    .container {
+      .small-nav {
+        width: 8% !important;
       }
     }
   }
@@ -505,7 +534,7 @@ body {
         align-items: center;
         .border-avt {
           position: relative;
-          border: 2px solid $dask-pink-color;
+          border: 2px solid $dark-pink-color;
           border-radius: 100%;
           padding: 23px;
           img {
@@ -520,6 +549,11 @@ body {
       }
       .main-show {
         display: block;
+        .chat-reminders {
+          .reminders {
+            width: unset;
+          }
+        }
       }
       .main {
         width: 100% !important;
@@ -533,7 +567,7 @@ body {
             .list-chat {
               .infor-chat {
                 .set-text {
-                  max-width: 130px;
+                  max-width: 450px;
                 }
               }
             }
@@ -584,6 +618,20 @@ body {
               display: block;
               margin-right: 15px;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .chat-reminders {
+    .chat-content {
+      .list-chat {
+        .infor-chat {
+          .set-text {
+            max-width: 130px !important;
           }
         }
       }

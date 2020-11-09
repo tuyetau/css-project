@@ -42,22 +42,10 @@ body .container .small-nav .icon-arrow {
   margin: 20px 35px 0 0 !important;
 }
 
-body .container .small-nav .menu-list li {
-  width: 250px;
-}
-
-body .container .small-nav .menu-list li:hover {
-  z-index: 8;
-  border-radius: 0 10px 10px 0;
-}
-
-body .container .small-nav .menu-list li:hover .active {
-  color: #000;
-}
-
 body .container .small-nav .menu-list li .active {
   display: block;
   color: transparent;
+  white-space: nowrap;
 }
 
 body .container .header {
@@ -140,7 +128,7 @@ body .container .sidebar .menu-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 25px 40px;
+  padding: 22px 40px;
 }
 
 body .container .sidebar .menu-list li:hover {
@@ -175,11 +163,27 @@ body .container .sidebar .menu-list .logout {
 }
 
 body .container .sidebar .menu-first {
-  min-height: 72vh;
+  min-height: 80vh;
 }
 
 body .container .main-show {
   width: calc(94% - 56px) !important;
+}
+
+body .container .main-show .chat-reminders .chat-content .list-chat li {
+  padding: 7.5px 0 !important;
+}
+
+body .container .main-show .chat-reminders .reminders {
+  width: 42vw;
+}
+
+body .container .main-show .chat-reminders .reminders .event-content .img-event {
+  width: 100% !important;
+}
+
+body .container .main-show .community .com-content .main-img img {
+  width: 564px;
 }
 
 body .container .main {
@@ -193,7 +197,7 @@ body .container .main .title-chat {
   font-family: Carmen Sans;
   font-weight: 500;
   line-height: 31px;
-  margin: 9px 0;
+  margin: 23px 0 9px 0;
 }
 
 body .container .main .search {
@@ -247,11 +251,10 @@ body .container .main .chat-reminders .reminders .title-reminder .see-more {
   font-family: Roboto;
   position: absolute;
   right: 0;
-  top: 12px;
+  top: 25px;
 }
 
 body .container .main .chat-reminders .reminders .event {
-  margin-top: 10px;
   position: relative;
 }
 
@@ -261,7 +264,7 @@ body .container .main .chat-reminders .reminders .event .all-events {
   font-family: Roboto;
   position: absolute;
   right: 0;
-  top: 12px;
+  top: 25px;
 }
 
 body .container .main .chat-reminders .reminders .event-content {
@@ -273,10 +276,11 @@ body .container .main .chat-reminders .reminders .event-content {
 
 body .container .main .chat-reminders .reminders .event-content .img-event {
   border-radius: 5px 5px 0 0;
+  width: 487px;
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event {
-  padding: 20px;
+  padding: 10px 15px 15px 15px;
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event button {
@@ -289,8 +293,8 @@ body .container .main .chat-reminders .reminders .event-content .main-event butt
   border-radius: 40px;
   padding: 12px;
   border: none;
-  font-weight: 600;
-  margin-top: 20px;
+  font-weight: 500;
+  margin: 15px 0 10px 0;
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event p {
@@ -304,14 +308,14 @@ body .container .main .chat-reminders .reminders .event-content .main-event .con
   color: #828282;
   font-size: 12px;
   font-family: Roboto;
-  line-height: 22px;
+  line-height: 12px;
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event .online {
   color: rgba(0, 0, 0, 0.87);
   font-size: 25px;
   font-family: Roboto;
-  line-height: 40px;
+  line-height: 35px;
   font-weight: 600;
 }
 
@@ -320,7 +324,7 @@ body .container .main .chat-reminders .reminders .event-content .main-event .des
   color: #828282;
   font-size: 12px;
   font-family: Roboto;
-  line-height: 20px;
+  line-height: 15px;
 }
 
 body .container .main .chat-reminders .reminders .event-content .main-event .clr {
@@ -361,7 +365,7 @@ body .container .main .chat-reminders .chat-content .header-search {
 
 body .container .main .chat-reminders .chat-content .header-search .search-second {
   width: 100%;
-  margin-right: 35px;
+  margin-right: 28px;
   position: relative;
 }
 
@@ -399,7 +403,7 @@ body .container .main .chat-reminders .chat-content .list-chat li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2px 0;
+  padding: 4px 0;
 }
 
 body .container .main .chat-reminders .chat-content .list-chat li .infor-chat {
@@ -473,7 +477,6 @@ body .container .main .chat-reminders .chat-content .list-chat .time {
 }
 
 body .container .main .chat-reminders .reminder-content {
-  min-height: 88px;
   background: #fff;
   -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
@@ -500,8 +503,8 @@ body .container .main .chat-reminders .reminder-content .card-first {
 
 body .container .main .chat-reminders .reminder-content .card-first .card-date {
   background: #e28bae;
-  padding: 18px;
-  width: 66px;
+  padding: 12px;
+  width: 55px;
   text-align: center;
   font-weight: 500;
   color: #fff;
@@ -569,6 +572,7 @@ body .container .main .community .main-img {
 
 body .container .main .community .main-img img {
   border-radius: 5px;
+  width: 487px;
 }
 
 body .container .main .community .main-img .card-time {
@@ -600,6 +604,12 @@ body .container .main .header-main {
 
 body .container .main .header-main .icon-search-mobile {
   display: none;
+}
+
+@media only screen and (max-width: 1366px) {
+  body .container .small-nav {
+    width: 8% !important;
+  }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
@@ -697,6 +707,9 @@ body .container .main .header-main .icon-search-mobile {
   body .container .main-show {
     display: block;
   }
+  body .container .main-show .chat-reminders .reminders {
+    width: unset;
+  }
   body .container .main {
     width: 100% !important;
   }
@@ -710,7 +723,7 @@ body .container .main .header-main .icon-search-mobile {
     margin-right: 0;
   }
   body .container .main .chat-reminders .chat-content .list-chat .infor-chat .set-text {
-    max-width: 130px;
+    max-width: 450px;
   }
   body .container .main .chat-reminders .chat {
     width: 100%;
@@ -759,6 +772,12 @@ body .container .main .header-main .icon-search-mobile {
   body .container .main .header-main .group-icon .icon-search-mobile {
     display: block;
     margin-right: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .chat-reminders .chat-content .list-chat .infor-chat .set-text {
+    max-width: 130px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
