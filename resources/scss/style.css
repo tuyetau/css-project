@@ -134,6 +134,9 @@ body .container .sidebar .menu-list li {
 body .container .sidebar .menu-list li:hover {
   background: #e28bae;
   color: #262626;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 600;
 }
 
 body .container .sidebar .menu-list li img {
@@ -164,6 +167,13 @@ body .container .sidebar .menu-list .logout {
 
 body .container .sidebar .menu-first {
   min-height: 80vh;
+}
+
+body .container .sidebar .menu-first .active-text {
+  color: #262626;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 600;
 }
 
 body .container .main-show {
@@ -614,20 +624,29 @@ body .container .main .header-main .icon-search-mobile {
 
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   body .container .sidebar {
-    width: 10%;
+    width: 24%;
   }
-  body .container .sidebar .icon-arrow {
-    display: none;
-  }
-  body .container .sidebar .text-menu {
-    display: none;
+  body .container .small-nav {
+    width: 10% !important;
   }
   body .container .main {
-    width: calc(90% - 56px);
+    width: calc(76% - 56px);
   }
   body .container .main .community ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
+  }
+  body .container .main .chat-reminders .chat {
+    width: 70vw;
+  }
+  body .container .main .chat-reminders .reminders {
+    width: 30vw;
+  }
+  body .container .main .chat-reminders .reminders .event-content .img-event {
+    width: 100%;
+  }
+  body .container .main-show {
+    width: calc(90% - 56px) !important;
   }
 }
 
@@ -751,7 +770,7 @@ body .container .main .header-main .icon-search-mobile {
     color: #262626;
     font-size: 34px;
     font-family: Carmen Sans;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 18px;
   }
   body .container .main .header-main .home-title:before {

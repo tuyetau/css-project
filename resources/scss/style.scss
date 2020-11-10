@@ -21,6 +21,7 @@
 $dark-pink-color: #d75f8d;
 $light-pink-color: #e28bae;
 $gray-color: #747474;
+$light-black: #262626;
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -84,7 +85,7 @@ body {
         .name-user {
           margin-left: 25px;
           .name-big {
-            @include fontText(#262626, 18px, Carmen Sans);
+            @include fontText($light-black, 18px, Carmen Sans);
             font-weight: 500;
             line-height: 18px;
             text-align: center;
@@ -107,7 +108,8 @@ body {
           padding: 22px 40px;
           &:hover {
             background: $light-pink-color;
-            color: #262626;
+            @include fontText($light-black, 18px, Roboto);
+            font-weight: 600;
           }
           img {
             margin-right: 35px;
@@ -129,11 +131,15 @@ body {
           }
         }
         .logout {
-          color: #262626;
+          color: $light-black;
         }
       }
       .menu-first {
         min-height: 80vh;
+        .active-text {
+          @include fontText($light-black, 18px, Roboto);
+          font-weight: 600;
+        }
       }
     }
     .main-show {
@@ -344,7 +350,7 @@ body {
                 .name {
                   font-weight: 600;
                   margin-block-end: 0;
-                  @include fontText(#262626, 14px, Roboto);
+                  @include fontText($light-black, 14px, Roboto);
                 }
                 .des-name {
                   margin-block-start: 0;
@@ -376,7 +382,7 @@ body {
               border-radius: 5px 0 0 5px;
             }
             .text {
-              @include fontText(#262626, 12px, Roboto);
+              @include fontText($light-black, 12px, Roboto);
               font-weight: 500;
               margin-left: 15px;
               width: 130px;
@@ -460,22 +466,35 @@ body {
   body {
     .container {
       .sidebar {
-        .icon-arrow {
-          display: none;
-        }
-        width: 10%;
-        .text-menu {
-          display: none;
-        }
+        width: 24%;
+      }
+      .small-nav {
+        width: 10% !important;
       }
       .main {
-        width: calc(90% - 56px);
+        width: calc(76% - 56px);
         .community {
           ::-webkit-scrollbar {
             width: 0px;
             background: transparent;
           }
         }
+        .chat-reminders {
+          .chat {
+            width: 70vw;
+          }
+          .reminders {
+            width: 30vw;
+            .event-content {
+              .img-event {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      .main-show {
+        width: calc(90% - 56px) !important;
       }
     }
   }
@@ -599,8 +618,8 @@ body {
           justify-content: space-between;
           position: relative;
           .home-title {
-            @include fontText(#262626, 34px, Carmen Sans);
-            font-weight: 600;
+            @include fontText($light-black, 34px, Carmen Sans);
+            font-weight: 500;
             line-height: 18px;
             &:before {
               content: 'Home';
