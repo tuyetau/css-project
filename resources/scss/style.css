@@ -735,6 +735,12 @@ body .container .main .header-main .icon-search-mobile {
   body .container .main .header-main {
     margin-top: 65px;
   }
+  body .container .main .header-main .input-search {
+    height: 45px;
+  }
+  body .container .main .header-main .icon-search {
+    top: 32%;
+  }
   body .container .main .chat-reminders {
     display: block;
   }
@@ -779,7 +785,7 @@ body .container .main .header-main .icon-search-mobile {
   body .container .main .header-main .search {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 64px;
     -webkit-box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
             box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
   }

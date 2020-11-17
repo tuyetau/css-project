@@ -578,6 +578,12 @@ body {
         width: 100% !important;
         .header-main {
           margin-top: 65px;
+          .input-search {
+            height: 45px;
+          }
+          .icon-search {
+            top: 32%;
+          }
         }
         .chat-reminders {
           display: block;
@@ -628,7 +634,7 @@ body {
           .search {
             display: none;
             position: absolute;
-            top: 60px;
+            top: 64px;
             box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.15);
           }
           .group-icon {
